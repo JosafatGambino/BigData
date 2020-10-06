@@ -1,4 +1,4 @@
-/Assessment 1
+//Practice 1
 //1. Desarrollar un algoritmo en scala que calcule el radio de un circulo
     var perimetro = scala.io.StdIn.readDouble()
 
