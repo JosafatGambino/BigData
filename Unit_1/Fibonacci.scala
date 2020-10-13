@@ -51,18 +51,18 @@ def fib4(n:Int) : Int = {
 //Algoritmo 5 Versión iterativa vector
 
 def fib5(n:Int) : Int = {
-    var vector = new Array[Int](n)
+    var vector = new Array[Int](n+2)
     if(n<2){
         return n
     }
     else{
-        for(i <- 1 to n){
-            vector(i-1) = i
+        for(i <- 1 to n+1){
+            vector(i) = i
         }
 
-        for(i <- 2 to n+1){
+        for(i <- 2 to n){
             vector(i) = vector(i-1) + vector(i-2)
         }
-        vector(n)
+        return vector(n)
     }
 }
