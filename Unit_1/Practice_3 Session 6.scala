@@ -47,7 +47,7 @@ def balance(list:List[Int]): Boolean={ //Function have as variable an integer ty
     segunda = list.sum //The second variable is equal to the addition of the elements of the list.
 
     for(i <- Range(0,list.length)){ //For loop where where it starts at 0 to the size of the list in iterations 
-        primera = primera + list(i) //The first variable is equal a the first variable  es igual a primera more element of the list 
+        primera = primera + list(i) //The first variable is equal a the first variable more element of the list 
         segunda = segunda - list(i) //The second variable is equal a the second variable less element of the list 
 
         if(primera == segunda){ //If the first variable is equal to the second variable so returns true 
