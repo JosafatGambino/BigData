@@ -1,4 +1,14 @@
-//Algorithm 2 Explicit formula version
+//Algorithm 1: Descendent recursive version
+
+def fib(n:Int) : Int = { 
+    if (n<2) { 
+        return n
+    }
+    else { 
+        return (fib(n-1) + fib(n-2)) 
+    }
+}
+//Algorithm 2: Explicit formula version
 
 def fib2(n:Int) : Double = {
     if(n<2) {
@@ -24,7 +34,19 @@ def fib3(n:Int) : Int = {
     return a
 }
 
-//Algorithm 5 Iterative vector version
+//Algorithm 4: Iterative version with 2 variables
+
+def fib4(n:Int) : Int = { 
+    var a = 0 
+    var b = 1 
+
+    for(i <- 1 to n){ 
+        b = b + a 
+        a = b - a 
+    }
+}
+
+//Algorithm 5: Iterative vector version
 
 def fib5(n:Int) : Int = {
     var vector = new Array[Int](n+2)
