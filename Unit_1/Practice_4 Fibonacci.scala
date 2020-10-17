@@ -44,6 +44,7 @@ def fib4(n:Int) : Int = {
         b = b + a 
         a = b - a 
     }
+    return a
 }
 
 //Algorithm 5: Iterative vector version

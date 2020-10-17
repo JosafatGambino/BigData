@@ -5,7 +5,7 @@ def listEvens(list:List[Int]): String ={ //Function have as variable an integer 
     for(n <- list){  //For loop where n is equal every element in the list
         if(n%2==0){  //If the number of the list when divided by 2 leaves 0 residue
             println(s"$n is even") //Print value as even number
-        }else{ //Si no
+        }else{ 
             println(s"$n is odd") //Print value as odd number
         }
     }
@@ -57,7 +57,7 @@ def balance(list:List[Int]): Boolean={ //Function have as variable an integer ty
     return false //else returns false 
 }
 
-val bl = List(3,2,1) //b1 is declared as a list of three elements of type int
+val bl = List(3,2,1) //bl is declared as a list of three elements of type int
 val bl2 = List(2,3,3,2) //b12 is declared as a list of three elements of type int
 val bl3 = List(10,30,90) //b13 is declared as a list of three elements of type int
 
