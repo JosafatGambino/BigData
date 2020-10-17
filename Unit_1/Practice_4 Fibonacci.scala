@@ -64,3 +64,34 @@ def fib5(n:Int) : Int = {
         return vector(n)
     }
 }
+
+//Algorithm 6: Divide and conquer
+
+def fib6(n:Int) : Int = {
+    if(n<=0){
+        return 0
+    }
+    var i = n - 1
+    var auxOne = 0
+    var auxTwo = 1
+
+    var a = auxTwo
+    var b = auxOne
+    var c = auxOne
+    var d = auxTwo
+
+    while(i>0){
+        if(i%2!=0){
+            auxOne = (d*b + c*a)
+            auxTwo = (d*(b+a)+c*b)
+            a = auxOne
+            b = auxTwo
+        }
+        auxOne = c*c + d*d
+        auxTwo = (d*(2*c + d))
+        c = auxOne
+        d = auxTwo
+        i = i / 2
+    }
+    return a + b
+}
