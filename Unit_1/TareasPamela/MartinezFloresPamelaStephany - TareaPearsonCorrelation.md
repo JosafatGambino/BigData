@@ -25,4 +25,4 @@ The closer to zero the value of r, the less relationship there will be between t
 
 Example of positive linear correlation:
 
-[]!(C:\Users\Admin\Documents\9no Semestre\Datos Masivos\GitHubJosafatGambino\BigData\Unit_1\TareasPamela\Images\Image1.png)
+[]!(https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/TareasPamela/Images/Image1.png)
