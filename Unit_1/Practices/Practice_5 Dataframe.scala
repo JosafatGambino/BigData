@@ -9,17 +9,17 @@
 //functions, each line of code contains a comment mentioning that each line 
 //does.
 
-//Importar SparkSession
+//Impor SparkSession
  import org.apache.spark.sql.SparkSession
 
-//Crear SparkSession
+//Create SparkSession
 val spark = SparkSession.builder().appName("MiApp").master("local").getOrCreate()
 
-//Importar SparkImplicits 
+//Import SparkImplicits 
 import spark.implicits._
 
-//Cargar dataframe 
-//Este data frame es un archivo de texto que contiene todo un dataset, entonces //esta línea de código toma la ruta para correrlo en la consola. 
+//Load dataframe
+//This data frame is a text file that contains an entire dataset, so this line of code takes the path to run it in the console.
 
 val dataf = spark.read.csv("C:/Users/Admin/Documents/9no Semestre/Datos Masivos/Practicas/CitiGroup2006_2008")
 
