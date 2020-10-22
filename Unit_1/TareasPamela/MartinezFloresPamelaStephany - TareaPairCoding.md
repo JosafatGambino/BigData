@@ -1,82 +1,88 @@
 
 ## PAIR CODING
 
-El **“Pair coding”**, o también conocido como _pair programming_, consiste en dos programadores que comparten una sola estación de trabajo (una pantalla, teclado y ratón entre el par).
+**Pair coding**, also known as _pair programming_, consists of two programmers who share a single 
+workstation (a screen, keyboard, and mouse between the peer).
 
-El programador en el teclado se llama generalmente el conductor **(driver)**, el otro, también participa activamente en la tarea de programación, pero centrarse más en la dirección general es el navegador **(navigator)** ; se espera que los programadores intercambien roles cada pocos minutos más o menos.
+The programmer on the keyboard is usually called the _driver_, the other is also actively involved in 
+the programming task, but focusing more on the general direction is the _navigator_; developers are 
+expected to exchange roles every few minutes or so.
 
 ### **Roles**
 
-Estas definiciones de roles de programación de pares clásicos se pueden aplicar de una u otra manera a muchos de los enfoques 
-para el emparejamiento(pairing). 
+These definitions of classic peer programming roles can be applied in one way or another to many of 
+the approaches for pairing.
 
-El conductor es la persona al volante, es decir, el teclado. Se centra en completar la pequeña meta en cuestión e ignorando 
-problemas más grandes. Un conductor siempre debe hablar a través de lo que está haciendo mientras lo hace.
+The _driver_ is the person behind the wheel, that is, the keyboard. It focuses on completing the small 
+goal in question and ignoring bigger problems. A driver should always talk through what he's doing while 
+doing it.
 
-El navegador está en la posición de observador, mientras el conductor está escribiendo. Se encarga de revisar el código 
-sobre la marcha, da instrucciones y comparte pensamientos. El navegador también tiene el enfoque en los problemas más 
-grandes, errores, y toma notas de posibles pasos u obstáculos.
+The _navigator_ is in the observer position, while the driver is typing. Take care of reviewing the 
+code on the fly, he gives instructions and shares thoughts. The navigator also has a focus on the most 
+errors, and takes notes of possible steps or obstacles.
 
-La idea de esta división de roles es tener dos perspectivas diferentes sobre el código. Se supone que el pensamiento del 
-conductor es más táctico, pensando en los detalles, las líneas de código a mano. El navegador puede pensar más estratégicamente 
-en su papel de observación. Tienen el panorama general en mente.
+The idea of this role division is to have two different perspectives on the code. The thought of 
+the driver is more tactical, thinking about the details, the lines of code by hand. The navigator 
+can think more strategically in his observational role. They have the big picture in mind.
 
-Un flujo común dice así:
-* Comience con una tarea razonablemente bien definida.
-* Acordar una pequeña meta a la vez. Esto se puede definir mediante una prueba, o por un mensaje de confirmación, 
-  o escrito en una nota adhesiva.
-* Cambie el teclado y los roles con regularidad. La participación activa compartida mantiene el nivel de energía, de 
-  esta manera se aprende  y se entiende mejor las cosas.
-* Como navegador, evitar el modo de pensamiento "táctico", dejar los detalles de la codificación al conductor, es decir, 
-  su trabajo es dar un paso atrás y complementar el modo más táctico de su pareja con el pensamiento a medio plazo. Tomar 
-  en cuenta  los próximos pasos, anotar los obstáculos potenciales e ideas para discutirlos después de que se hace el pequeño 
-  objetivo, con el fin de no interrumpir el flujo del conductor.
+A common flow reads like this:
 
-### **Técnicas**
+* Start with a reasonably well-defined task.
+* Agree one small goal at a time. This can be defined by a test, or by a confirmation message, or 
+  written on a sticky note.
+* Change keyboard and roles regularly. Shared active participation maintains the level of energy, 
+  this way you learn and understand things better.
+* As a navigator, avoid the "tactical" thinking mode, leave the coding details to the driver, your 
+  job is to take a step back and complement your partner's most tactical way with medium-term thinking. 
+  Take into account the next steps, note the potential obstacles and ideas to discuss them after the 
+  little objective, in order not to interrupt the flow of the driver.
+
+
+### **Techniques**
 ##### ___“Ping Pong”___
-Esta técnica adopta el desarrollo controlado por pruebas (TDD - Test-Driven Development). Se recomienda aplicarla 
-cuando se tiene una tarea claramente definida que puede ser implementada de una manera. 
+This technique adopts test-driven development (TDD). It is recommended to apply it when you have a 
+clearly defined task that can be implemented in a way. 
 
-* "Ping": El desarrollador A escribe una prueba fallida.
-* "Pong": El desarrollador B escribe la implementación para que pase.
+* "Ping": Developer A writes a failed test.
+* "Pong": Developer B writes the deployment to pass.
 
-A continuación, el desarrollador B inicia el siguiente "Ping", es decir, la siguiente prueba de error.
+Developer B then starts the following "Ping", that is, the next error test.
 
-Cada "Pong" también se puede seguir refactorizando el código en conjunto, antes de pasar 
-a la siguiente prueba con errores. De esta manera se sigue el enfoque "Rojo - Verde - 
-Refactor": Escriba una prueba fallida (rojo), hacerlo pasar con los medios mínimos 
-necesarios (verde) y luego refactorizar.
+Each "Pong" can also continue to refactor the code together, before moving on to the next failed test. 
+This follows the "Red - Green - Refactor" approach: Write a failed test (red), pass it with the minimum 
+means (green) and then refactor.
 
-##### ___“Emparejamiento de estilo fuerte (Strong-Style Pairing)”___
+##### ___“Strong-Style Pairing”___
 
-Esta es una técnica particularmente útil para la transferencia de conocimientos, descrita por Llewellyn Falco.
+This is a particularly useful technique for knowledge transfer, described by Llewellyn Falco.
 
-La regla es: "Para llevar una idea de la cabeza a la computadora DEBE pasar por las manos de otra persona". 
-En este estilo, el _navegador_ suele ser la persona mucho más experimentada con la configuración o tarea en 
-cuestión, mientras que el _conductor_ es un principiante (con el idioma, la herramienta, el código base, ...). 
-La persona experimentada se queda principalmente en el rol de navegante y guía al principiante.
+The rule is: "To bring an idea from head to computer MUST pass through someone else's hands". In this 
+style, the _navigator_ is usually the most experienced person with the settings or task in issue, 
+while the _driver_ is a beginner (with language, tool, codebase, ...). The experienced person stays 
+mainly in the role of navigator and guides the beginner.
 
 
-## CONCLUSIÓN
+## CONCLUSION
 
-El pair coding es una manera de programar en conjunto, exactamente dos personas. Una persona estará al mando de 
-la computadora, es decir, manipulación de teclado, mouse y software. Se le conoce como driver porque conduce la 
-programación de una meta propuesta. El tendrá que estar explicando lo que programa a la vez para que el otro 
-compañero entienda que se está realizando.
+Pair coding is a way to program together, exactly two people. A person will be in charge of computer, 
+i.e manipulation of keyboard, mouse and software. It is known as a driver because it drives the 
+programming of a proposed goal. He'll have to be explaining what he's programming at once so that the 
+other partner understands what's being done.
 
-La otra persona conocida como navegador es quien lleva la dirección del trabajo, por ejemplo: un director de una 
-película, quien dirige las acciones, ideas y ejecuciones a realizar en el proyecto, sin embargo, el navegador es 
-abierto a tener en cuenta la perspectivas distintas y opiniones de su compañero.
+The other person known as a navigator is the one who carries the direction of work, for example: 
+a director of a movie, who directs the actions, ideas and executions to be performed in the project, 
+however, the navigator is open to taking into account the different perspectives and opinions of his 
+partner.
 
-Al pair coding le observa una ventaja como dice el dicho: “Dos cabezas piensan mejor que una”, pero porque? 
-Porque una sola mente al tratar de encontrar una solución, esta tiene ideas y conocimientos propios a otra persona.
-Entonces cuando cometemos errores muchas ocasiones no podemos ver donde nos hemos equivocado. Y esta buena práctica 
-nos ayuda mucho a visualizar este tipo de situaciones.
-También trabajar en conjunto es muy viable para encontrar distintas soluciones, por la existencia de diferentes ideas, 
-observaciones o formas de ver las cosas.
+Pair coding sees an advantage as the saying goes, "Two heads think better than one", but why? Because 
+one mind when trying to find a solution, it has ideas and knowledge of its own to another person.
+So when we make mistakes many times, we can't see where we've made a mistake. And this good practice 
+helps us a lot to visualize these kinds of situations.
+Working together is also very feasible to find different solutions, because of the existence of different 
+ideas, observations or ways of seeing things.
 
-Básicamente este estilo de programación tiene el objetivo de tomar un enfoque en cumplir la meta con ayuda de dos mentes 
-para encontrar soluciones, trabajando de manera eficiente ya que alguien conduce la programación y cumple metas a corto 
-plazo y el navegador dirige la programación con sus ideas pero ampliando los posibles retos o escenarios que se encuentren 
-a futuro en el desarrollo del proyecto.
+Basically this programming style aims to take a focus on meeting the goal with the help of two minds to 
+find solutions, working efficiently as someone drives programming and meets short goals the navigator 
+directs programming with its ideas but expanding potential challenges or scenarios found future development 
+of the project.
 
