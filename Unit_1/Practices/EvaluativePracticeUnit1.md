@@ -50,7 +50,7 @@ the implemented lines of code.
 ```scala
     //You can use a for loop to print the name of the columns with the "columns" method
     for(i <- 0 to 4){
-        println(dataNetflix.columns(i))
+        dataNetflix.select(dataNetflix.schema.names(i)).show()
     }
 ```
 
