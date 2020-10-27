@@ -1,8 +1,7 @@
 ## EVALUATIVE PRACTICE UNIT 1 - BIG DATA
 
 In the next set of instructions, each instruction contains the code fulfilling 
-the corresponding purpose. Adding the result in image format of the execution of 
-the implemented lines of code.
+the corresponding purpose.
 
 ### **1. Start a simple Spark session.** 
 ```scala
