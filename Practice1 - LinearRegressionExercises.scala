@@ -47,3 +47,24 @@ val assembler = new VectorAssembler().setInputCols(Array("Avg Session Length","T
 //3)Use Assembler to transform our DataFrame to 2 columns: label and features
 val dataf2 = assembler.transform(df).select($"label", $"features")
 dataf2.show()
+
+/////// Linear Regression /////////////
+
+// Create a object to Linear regression model.  
+val lr = new LinearRegression()
+
+// Adjust the model for data and call to this model "lrModelo"
+val lrModelo = lr.fit(dataf2)
+
+// Summarize the model on the training set, print out some metrics.
+// Use the summary method of our model to create an object called "trainingSummary"
+val trainingSummary = lrModelo.summary
+
+//Prints the coefficients and intercept to Linear Regression.
+println(s"Coefficients: ${lrModelo.coefficients} Intercept: ${lrModelo.intercept}")
+
+//Shows the residuals values, RMSE, MSE, and R^2.
+trainingSummary.residuals.show()
+println(s"RMSE: ${trainingSummary.rootMeanSquaredError}")
+println(s"MSE: ${trainingSummary.meanSquaredError}")
+println(s"r2: ${trainingSummary.r2}")
