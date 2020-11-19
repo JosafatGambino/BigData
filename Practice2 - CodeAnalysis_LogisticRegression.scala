@@ -53,3 +53,40 @@ import org.apache.spark.ml.linalg.Vectors
 val assembler = (new VectorAssembler()
                   .setInputCols(Array("Daily Time Spent on Site", "Age","Area Income","Daily Internet Usage","Hour","Male"))
                   .setOutputCol("features"))
+
+                  // Use randomSplit to create 70/30 split test and train data
+val Array(training, test) = logregdata.randomSplit(Array(0.7, 0.3), seed = 12345)
+
+
+///////////////////////////////
+//  Set up a Pipeline  ///////
+/////////////////////////////
+
+// Import  Pipeline
+import org.apache.spark.ml.Pipeline
+// Create a new LogisticRegression object called lr
+val lr = new LogisticRegression()
+// Create a new pipeline with the elements: assembler, lr
+val pipeline = new Pipeline().setStages(Array(assembler, lr))
+// Fit the pipeline for the training set.
+val model = pipeline.fit(training)
+// Take the Results in the Test set with transform
+val results = model.transform(test)
+
+////////////////////////////////////
+//// Model evaluation /////////////
+//////////////////////////////////
+
+
+// For Metrics and Evaluation import MulticlassMetrics
+import org.apache.spark.mllib.evaluation.MulticlassMetrics
+// Convert test results to RDD using .as and .rdd
+val predictionAndLabels = results.select($"prediction",$"label").as[(Double, Double)].rdd
+// Initialize a MulticlassMetrics object
+val metrics = new MulticlassMetrics(predictionAndLabels)
+
+// Print the Confusion matrix
+println("Confusion matrix:")
+println(metrics.confusionMatrix)
+
+metrics.accuracy
