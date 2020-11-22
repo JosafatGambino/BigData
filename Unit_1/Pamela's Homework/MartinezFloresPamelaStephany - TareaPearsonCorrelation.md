@@ -25,22 +25,22 @@ The closer to zero the value of r, the less relationship there will be between t
 
 Example of positive linear correlation:
 
-![](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/TareasPamela/Images/Image1.png)
+![](https://github.com/JosafatGambino/BigData/Unit_1/Unit_1/Pamela's%20Homework/Images/Image1.png)
 
 Example of negative linear correlation:
 
-![](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/TareasPamela/Images/Image2.png)
+![](https://github.com/JosafatGambino/BigData/Unit_1/Unit_1/Pamela's%20Homework/Images/Image2.png)
 
 Example of nonlinear correlation:
 
-![](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/TareasPamela/Images/Image3.png)
+![](https://github.com/JosafatGambino/BigData/Unit_1/Unit_1/Pamela's%20Homework/Images/Image3.png)
 
 #### Formula
 
 The Pearson correlation coefficient is defined by the following expression: 
 
 
-![](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/TareasPamela/Images/Image4.png)
+![](https://github.com/JosafatGambino/BigData/Unit_1/Unit_1/Pamela's%20Homework/Images/Image4.png)
 
 
 Pearson's correlation coefficient refers to the cross-product mean of standardized X and Y scores. This formula brings together some properties that make it preferable to others. To trade with standardized scores is a free index of measurement scale. On the other hand, its value fluctuates, as already indicated, in absolute terms, between 0 and 1. 
@@ -48,7 +48,7 @@ This formula is especially useful when X and Y means are known as well as their 
 
 **Example. Let's have the following scores in variables X (intelligence) and Y (academic performance):**
 
-![](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/TareasPamela/Images/Image5.png)
+![](https://github.com/JosafatGambino/BigData/Unit_1/Unit_1/Pamela's%20Homework/Images/Image5.png)
 
 
 **Calculate Pearson's correlation coefficient in direct scores:**
@@ -56,19 +56,19 @@ This formula is especially useful when X and Y means are known as well as their 
 Before calculating Pearson's correlation coefficient, we need to check for a linear trend in the relationship. Although we will later offer analytical procedures to verify exactly the Linearity Hypothesis, for the time being, we will resort to graphical procedures, which in a first instance, may be sufficient: 
 
 
-![](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/TareasPamela/Images/Image6.png)
+![](https://github.com/JosafatGambino/BigData/Unit_1/Unit_1/Pamela's%20Homework/Images/Image6.png)
 
 
 There is a certain linear trend in the relationship. We can therefore proceed to calculate Pearson's correlation coefficient. Let's set up the following table: 
 
 
-![](https://github.com/JosafatGambino/BigData/tree/Unit_1/Unit_1/Pamela's%20Homework/Images/Image7.png)
+![](https://github.com/JosafatGambino/BigData/Unit_1/Unit_1/Pamela's%20Homework/Images/Image7.png)
 
 
 The variables needed to apply the formula and obtain the Pearson correlation coefficient are calculated: 
 
 
-![](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/TareasPamela/Images/Image8.png)
+![](https://github.com/JosafatGambino/BigData/Unit_1/Unit_1/Pamela's%20Homework/Images/Image8.png)
 
 
 ### CONCLUSION
