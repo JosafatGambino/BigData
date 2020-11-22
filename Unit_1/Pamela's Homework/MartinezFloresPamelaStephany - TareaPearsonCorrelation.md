@@ -62,7 +62,7 @@ Before calculating Pearson's correlation coefficient, we need to check for a lin
 There is a certain linear trend in the relationship. We can therefore proceed to calculate Pearson's correlation coefficient. Let's set up the following table: 
 
 
-![](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/TareasPamela/Images/Image7.png)
+![](https://github.com/JosafatGambino/BigData/tree/Unit_1/Unit_1/Pamela's%20Homework/Images/Image7.png)
 
 
 The variables needed to apply the formula and obtain the Pearson correlation coefficient are calculated: 
