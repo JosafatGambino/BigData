@@ -1,46 +1,23 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one or more
- * contributor license agreements.  See the NOTICE file distributed with
- * this work for additional information regarding copyright ownership.
- * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+//PRACTICE: CODE ANALYSIS ABOUT "CHI SQUARE TEST"
 
-// scalastyle:off println
-package org.apache.spark.examples.ml
-
-// $example on$
+//Importar librerias
 import org.apache.spark.ml.linalg.{Vector, Vectors}
 import org.apache.spark.ml.stat.ChiSquareTest
-// $example off$
 import org.apache.spark.sql.SparkSession
 
-/**
- * An example for Chi-square hypothesis testing.
- * Run with
- * {{{
- * bin/run-example ml.ChiSquareTestExample
- * }}}
- */
+//An object is declared
 object ChiSquareTestExample {
 
+//Initializes a function
   def main(args: Array[String]): Unit = {
-    val spark = SparkSession
-      .builder
-      .appName("ChiSquareTestExample")
-      .getOrCreate()
+    
+    //Create a simple SparkSession
+    val spark = SparkSession.builder.appName("ChiSquareTestExample").getOrCreate()
+    
+    //Import library
     import spark.implicits._
 
-    // $example on$
+    //Vector values are declared with the function seq for handling
     val data = Seq(
       (0.0, Vectors.dense(0.5, 10.0)),
       (0.0, Vectors.dense(1.5, 20.0)),
@@ -50,14 +27,20 @@ object ChiSquareTestExample {
       (1.0, Vectors.dense(3.5, 40.0))
     )
 
+    //A dataframe is created with the columns called "label" and "features"
     val df = data.toDF("label", "features")
+    
+    //Null hypothesis or "ChiSquare Test" is created using the dataframe previously created with their respective columns
     val chi = ChiSquareTest.test(df, "features", "label").head
     println(s"pValues = ${chi.getAs[Vector](0)}")
-    println(s"degreesOfFreedom ${chi.getSeq[Int](1).mkString("[", ",", "]")}")
-    println(s"statistics ${chi.getAs[Vector](2)}")
-    // $example off$
 
+    //Result of values "Degrees Of Freedom"
+    println(s"degreesOfFreedom ${chi.getSeq[Int](1).mkString("[", ",", "]")}")
+    
+    //Result of values "Statistics"
+    println(s"statistics ${chi.getAs[Vector](2)}")
+    
+    //Example off
     spark.stop()
   }
 }
-// scalastyle:on println
