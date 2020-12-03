@@ -28,8 +28,6 @@ val rf = new RandomForestClassifier().setLabelCol("indexedLabel").setFeaturesCol
 
 //Convert indexed labels back to original labels.
 val labelConverter = new IndexToString().setInputCol("prediction").setOutputCol("predictedLabel").setLabels(labelIndexer.labels) 
-  //Aqui marca error <console>:32: error: value labelsArray is not a member of org.apache.spark.ml.feature.StringIndexer
- // labelConverter.transform(indexed)
 
 //Chain indexers and forest in a Pipeline.
 val pipeline = new Pipeline().setStages(Array(labelIndexer, featureIndexer, rf, labelConverter))
