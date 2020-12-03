@@ -1,59 +1,58 @@
-// Se importa MultilayerPerceptronClassifier y MulticlassClassificationEvaluator
+// Import the MultilayerPerceptronClassifier and MulticlassClassificationEvaluator libraries
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
 // $example off$
-// Se importa la sesion de Spark
+// Import SparkSession library
 import org.apache.spark.sql.SparkSession
 
 /**
  * An example for Multilayer Perceptron Classification.
  */
 
- // Creacion del objeto MultilayerPerceptronClassifier
+ // Creation of the MultilayerPerceptronClassifier object
 object MultilayerPerceptronClassifierExample {
 
-// Se define la funcion main la cual tiene como parametro un Array de tipo string
+// Define main function
   def main(): Unit = {
-    // Se crea el objeto de la clase SparkSession, y a la app se le da el nombre de
-    // MultilayerPerceptronClassifierExample
+    // Start a spark session with the name "MultilayerPerceptronClassifierExample"
     val spark = SparkSession
       .builder
       .appName("MultilayerPerceptronClassifierExample")
       .getOrCreate()
 
     // $example on$
-    // Se cargan los datos en formato libsvm del archivo como un DataFrame
+    // Load the data in libsvm format from the file as a DataFrame
     val data = spark.read.format("libsvm")
       .load("sample_multiclass_classification_data.txt")
 
-    // Se dividen los datos en entrenamiento y prueba
+    // Data is divided into training and testing
     val splits = data.randomSplit(Array(0.6, 0.4), seed = 1234L)
     val train = splits(0)
     val test = splits(1)
 
-    // Se especifican las capas de la red neuronal:
-    // La capa de entrada es de tamaño 4 (caracteristicas), dos capas intermedias
-    // una de tamaño 5 y la otra de tamaño 4
-    // y 3 de salida (las clases)
+    // The layers of the neural network are specified:
+    // The input layer is size 4 (features), two intermediate layers
+    // one whit size 5 and the other with size 4
+    // and 3 layers for output
     val layers = Array[Int](4, 5, 4, 3)
 
-    // Se establecen los parametros de entrenamiento
+    // Set the training parameters
     val trainer = new MultilayerPerceptronClassifier()
       .setLayers(layers)
       .setBlockSize(128)
       .setSeed(1234L)
       .setMaxIter(100)
 
-    // Se entrena el modelo
+    // Fit the model
     val model = trainer.fit(train)
 
-    // Se calcula la precision de los datos de prueba
+    // Calculate the accuracy of test data
     val result = model.transform(test)
     val predictionAndLabels = result.select("prediction", "label")
     val evaluator = new MulticlassClassificationEvaluator()
       .setMetricName("accuracy")
 
-    // Se imprime la exactidud del modelo
+    // Print the model
     println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
     // $example off$
 
