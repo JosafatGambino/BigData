@@ -29,28 +29,28 @@ the corresponding purpose.
 ```scala
  dataf.columns
 ```
-![]()
+![](https://github.com/JosafatGambino/BigData/blob/Unit_2/images/evaluation/image01.png)
 
 ### 3. How is the scheme?
 
 ```scala
  dataf.printSchema()
 ```
-![]()
+![](https://github.com/JosafatGambino/BigData/blob/Unit_2/images/evaluation/image02.png)
 
 ### 4. Print the first 5 columns.
 
 ```scala
 dataf.head(5)
 ```
-![]()
+![](https://github.com/JosafatGambino/BigData/blob/Unit_2/images/evaluation/image03.png)
 
 ### 5. Use the describe method () to learn more about DataFrame data.
 
 ```scala
 dataf.describe().show()
 ```
-![]()
+![](https://github.com/JosafatGambino/BigData/blob/Unit_2/images/evaluation/image04.png)
 
 ### 6. Make the relevant transformation for the categorical data which will beour labels to classify.
 
@@ -60,7 +60,7 @@ dataf.describe().show()
     val indexed = labelIndexer.transform(dataf).drop("species").withColumnRenamed("indexedLabel", "label")
     indexed.describe().show()
 ```
-![]()
+![](https://github.com/JosafatGambino/BigData/blob/Unit_2/images/evaluation/image05.png)
 
 ```scala
     //Create vector with the columns "sepal_length", "sepal_width", "petal_length", "petal_width"
@@ -73,7 +73,7 @@ dataf.describe().show()
     println(s"Found labels: ${labelIndexer.labels.mkString("[", ", ", "]")}")
     features.show
 ```
-![]()
+![](https://github.com/JosafatGambino/BigData/blob/Unit_2/images/evaluation/image06.png)
 
 ### 7. Construct the classification models and explain their architecture.
 
