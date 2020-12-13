@@ -50,5 +50,27 @@
     features.show
 
 //7. Construct the classification models and explain their architecture.
+    // First, we divide the data into train and test (70% for train and 30% for test)
+    val splits = features.randomSplit(Array(0.7, 0.3), seed = 1234L)
+    val train = splits(0)
+    val test = splits(1)
+
+
+    // We specify the layers of the dataframe:
+    // The input layer is size 4 (features), two intermediate layers one whit size 5 and the other with size 4
+    // and 3 layers for output
+    val layers = Array[Int](4, 5, 4, 3)
+
+    // Set the training parameters
+    val trainer = new MultilayerPerceptronClassifier().setLayers(layers).setBlockSize(128).setSeed(1234L).setMaxIter(100)
+
+    // Fit the model
+    val model = trainer.fit(train)
+
+    // Calculate the accuracy of test data
+    val result = model.transform(test)
+    val predictionAndLabels = result.select("prediction", "label")
+    val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
 
 //8. Print the results of the model
+    println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
