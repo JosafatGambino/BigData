@@ -9,7 +9,6 @@ the corresponding purpose.
 
 ```scala
  //Import required libraries, packages and APIs
-    //Importar las librerias, paqueterias y APIs necesarias.
     import org.apache.spark.sql.types.IntegerType
     import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
     import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
