@@ -42,7 +42,7 @@ val dataf = spark.read.option("header", "true").option("inferSchema","true")csv(
 val feature_data = dataf.select("Fresh", "Milk", "Grocery", "Frozen", "Detergents_Paper", "Delicassen")
 feature_data.show
 ```
-![]()
+![](https://github.com/JosafatGambino/BigData/blob/Unit_3/images/image01.PNG)
 
 ### 7. Import Vector Assembler and Vector
 
@@ -75,16 +75,16 @@ val model = kmeans.fit(features)
 ```scala
 val WSSSE = model.computeCost(features)
 ```
-![]()
+![](https://github.com/JosafatGambino/BigData/blob/Unit_3/images/image02.png)
 
 ```scala
 println(s"Within set sum of Squared Errors = $WSSSE")
 ```
-![]()
+![](https://github.com/JosafatGambino/BigData/blob/Unit_3/images/image03.png)
 
 ```scala
 //Print centroids
 println("Cluster Centers: ")
 model.clusterCenters.foreach(println)
 ```
-![]()
+![](https://github.com/JosafatGambino/BigData/blob/Unit_3/images/image04.png)
