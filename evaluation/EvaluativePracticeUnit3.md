@@ -2,6 +2,9 @@
 
 **The objective of this practice is to try to group customers from specific regions of a wholesaler. This is based on sales of some product categories.**
 
+**The data source is located in the repository:**
+https://github.com/jcromerohdz/BigData/blob/master/Spark_clustering/Wholesale%20customers%20data.csv 
+
 In the next set of instructions, each instruction contains the code fulfilling 
 the corresponding purpose.
 
