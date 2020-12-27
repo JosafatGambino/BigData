@@ -26,25 +26,25 @@ val spark = SparkSession.builder.appName("DecisionTree").getOrCreate()
 
 //Load information stored in the file bank.csv
 val dataf = spark.read.option("header", "true").option("inferSchema","true").option("delimiter",";")csv("C:/Users/Admin/Desktop/Project Big Data/bank.csv")
-//val df  = spark.read.option("header","true").option("inferSchema", "true").option("delimiter",";").format("csv").load("/home/eduardo/Escritorio/DatosMasivos/Unidad4/bank-full.csv")
 
 // Fit on whole dataset to include all labels into the index
 val labelIndexer = new StringIndexer().setInputCol("y").setOutputCol("indexedLabel").fit(dataf)
 val indexed = labelIndexer.transform(dataf).drop("y").withColumnRenamed("indexedLabel", "label")
 
-//
+//Create a new object Vector Assembler to the selected columns within an array 
 val vectorFeatures = (new VectorAssembler().setInputCols(Array("balance","day","duration","pdays","previous")).setOutputCol("features"))
+
+//Use the Assembler object to transform "indexed" 
 val features = vectorFeatures.transform(indexed)
 
-//
+//Rename column and select columns "label" & "features"
 val featuresLabel = features.withColumnRenamed("y", "label")
 val dataIndexed = featuresLabel.select("label","features")
 
-//
+//Create a new object StringIndexer to select columns and fit dataIndexed
 val labelIndexer = new StringIndexer().setInputCol("label").setOutputCol("indexedLabel").fit(dataIndexed)
 
 // Automatically identify categorical features and then index them
-// features with > 4 distinct values are treated as continuous.
 val featureIndexer = new VectorIndexer().setInputCol("features").setOutputCol("indexedFeatures").setMaxCategories(4).fit(dataIndexed)
 
 //Split the data into training and test sets (30% held out for testing)
