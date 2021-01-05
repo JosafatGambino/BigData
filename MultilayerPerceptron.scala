@@ -12,10 +12,6 @@ import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
 
-//This code is to know the performance of the algorithm (time and memory)
-val runtime = Runtime.getRuntime
-val startTimeMillis = System.currentTimeMillis()
-
 //Creation of the MultilayerPerceptronClassifier object
 object MultilayerPerceptronClassifierExample {
 
@@ -70,16 +66,21 @@ println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
 val accuracy = evaluator.evaluate(result)
 println(s"Test Error = ${(1.0 - accuracy)}")
 
+
+//This code is to know the performance of the algorithm (time and memory)
+val runtime = Runtime.getRuntime
+val startTimeMillis = System.currentTimeMillis()
+
 //Memory
 val mb = 0.000001
 println("Used Memory: " + (runtime.totalMemory - runtime.freeMemory) * mb)
 println("Free Memory: " + runtime.freeMemory * mb)
 println("Total Memory: " + runtime.totalMemory * mb)
-println("Max Memory: " + runtime.maxMemory * mb)
 
 //Time
 val endTimeMillis = System.currentTimeMillis()
 val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
+
 
     spark.stop()
   }

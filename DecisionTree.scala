@@ -13,10 +13,6 @@ import org.apache.spark.ml.linalg.Vectors
 import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
 
-//This code is to know the performance of the algorithm (time and memory)
-val runtime = Runtime.getRuntime
-val startTimeMillis = System.currentTimeMillis()
-
 //An object is declared
 object DecisionTree {
   def main(args: Array[String]): Unit = {
@@ -79,12 +75,16 @@ println(s"Test Error = ${(1.0 - accuracy)}")
 val treeModel = model.stages(2).asInstanceOf[DecisionTreeClassificationModel]
 println(s"Learned classification tree model:\n ${treeModel.toDebugString}")
 
+
+//This code is to know the performance of the algorithm (time and memory)
+val runtime = Runtime.getRuntime
+val startTimeMillis = System.currentTimeMillis()
+
 //Memory
 val mb = 0.000001
 println("Used Memory: " + (runtime.totalMemory - runtime.freeMemory) * mb)
 println("Free Memory: " + runtime.freeMemory * mb)
 println("Total Memory: " + runtime.totalMemory * mb)
-println("Max Memory: " + runtime.maxMemory * mb)
 
 //Time
 val endTimeMillis = System.currentTimeMillis()
