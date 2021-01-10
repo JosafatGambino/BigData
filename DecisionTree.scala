@@ -85,6 +85,7 @@ val mb = 0.000001
 println("Used Memory: " + (runtime.totalMemory - runtime.freeMemory) * mb)
 println("Free Memory: " + runtime.freeMemory * mb)
 println("Total Memory: " + runtime.totalMemory * mb)
+println("Max Memory: " + runtime.maxMemory * mb)
 
 //Time
 val endTimeMillis = System.currentTimeMillis()
