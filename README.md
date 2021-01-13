@@ -8,6 +8,11 @@
 * [Practice 4](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/Practices/Practice_4%20Fibonacci.scala)
 * [Practice 5](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/Practices/Practice_5%20Dataframe.scala)
 
+### Evaluative Practice
+
+* [Evaluative Practice](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/Practices/EvaluativePracticeUnit1.md)
+* [Scala File](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/Practices/EvaluativePracticeUnit1.scala)
+
 
 ### Homework
 
