@@ -1,3 +1,6 @@
+# Big Data
+
+## Unit 1
 
 ### Practices 
 
@@ -18,9 +21,7 @@
 * [Pamela's Homework](https://github.com/JosafatGambino/BigData/tree/Unit_1/Unit_1/Pamela's%20Homework)
 * [Kevin's Homework](https://github.com/JosafatGambino/BigData/tree/Unit_1/Unit_1/Kevin's%20Homework)
 =======
-# Datos_masivos
-
-## Practices
+## Unit 2
 ### Code analysis
 * [Practice 1: Linear Regression Exercises](https://github.com/JosafatGambino/BigData/blob/Unit_2/practices/Practice1%20-%20LinearRegressionExercises.scala)
 * [Practice 2: Code Analysis_Logistic Regression](https://github.com/JosafatGambino/BigData/blob/Unit_2/practices/Practice2%20-%20CodeAnalysis_LogisticRegression.scala)
