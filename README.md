@@ -38,3 +38,15 @@ Hernández Gambino Kevin Josafat    17211049
 Tijuana, Baja California, January 04, 2021.
 
 </div>
+
+## Index
+
+### Scala Files
+* [Decision Tree](https://github.com/JosafatGambino/BigData/blob/Project/DecisionTree.scala)
+* [SVM](https://github.com/JosafatGambino/BigData/blob/Project/SVM.scala)
+* [Logistic Regression](https://github.com/JosafatGambino/BigData/blob/Project/LogisticRegression.scala)
+* [Multilayer Perceptron](https://github.com/JosafatGambino/BigData/blob/Project/MultilayerPerceptron.scala)
+
+### Project Files
+* [PDF File](https://github.com/JosafatGambino/BigData/blob/Project/BigDataFinalProject.pdf)
+* [Results Table](https://github.com/JosafatGambino/BigData/blob/Project/Results.xlsx)
