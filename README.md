@@ -1,5 +1,3 @@
-# BigData
-
 ### Practices 
 
 * [Practice 1](https://github.com/JosafatGambino/BigData/blob/Unit_1/Unit_1/Practices/Practice_1.scala)
