@@ -20,7 +20,7 @@
 
 * [Pamela's Homework](https://github.com/JosafatGambino/BigData/tree/Unit_1/Unit_1/Pamela's%20Homework)
 * [Kevin's Homework](https://github.com/JosafatGambino/BigData/tree/Unit_1/Unit_1/Kevin's%20Homework)
-=======
+
 ## Unit 2
 ### Code analysis
 * [Practice 1: Linear Regression Exercises](https://github.com/JosafatGambino/BigData/blob/Unit_2/practices/Practice1%20-%20LinearRegressionExercises.scala)
@@ -41,3 +41,8 @@
 ### Evaluative Practice
 * [Evaluative Practice](https://github.com/JosafatGambino/BigData/blob/Unit_2/evaluation/EvaluativePracticeUnit2.md)
 * [Scala File](https://github.com/JosafatGambino/BigData/blob/Unit_2/evaluation/EvaluativePracticeUnit2.scala)
+
+## Unit 3
+### Evaluation
+* [Evaluative Practice](https://github.com/JosafatGambino/BigData/blob/Unit_3/evaluation/EvaluativePracticeUnit3.md)
+* [Scala File](https://github.com/JosafatGambino/BigData/blob/Unit_3/evaluation/EvaluativePracticeUnit3.scala)
